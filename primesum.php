@@ -8,11 +8,11 @@ function primeSum($limit){
 		if(isPrime($i)){
 			$primes[]=$i;
 			$sum+=$i;
-			if(isPrime($sum)){
+			if(isPrime($sum) && $sum<$limit){
 				$sums[]=$sum; 
 			}  
 			if($sum>$limit){
-				unset($sums[count($sums)]);
+				//unset($sums[count($sums)]);
 				break;
 			}
 		}
